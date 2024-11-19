@@ -17,7 +17,7 @@ const bd=`mongodb+srv://${usern}:${passw}@lbase.axdxirs.mongodb.net/?retryWrites
 mongoose.connect(bd)
 .then(()=>{console.log("connected")})
 
-app.post("/data",async(req,res)=>{
+app.post("/",async(req,res)=>{
     const data= await feed_data.create(req.body)
 })
 
